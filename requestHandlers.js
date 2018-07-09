@@ -34,15 +34,15 @@ function upload(response, request) {
         console.log('parsing done');
 
         //some windows stuff re renaming existing file
-        fs.rename(files.upload.path, "/tmp/test.png", function(error) {
+        fs.rename(files.upload.path, '/tmp/test.png', function(error) {
             if(error) {
-                fs.unlink("/tmp/test.png");
-                fs.rename(files.upload.path, "/tmp/test.png");
+                fs.unlink('/tmp/test.png');
+                fs.rename(files.upload.path, '/tmp/test.png');
             }
         });
-        response.writeHead(200, { "Content-Type": "text/html" });
+        response.writeHead(200, { 'Content-Type': 'text/html' });
         response.write('Received image:<br/> ');
-        response.write("<img src= '/show' />");
+        response.write("<img src='/show' />");
         response.end();
     });
 }
