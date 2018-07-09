@@ -1,8 +1,6 @@
-/* eslint-disable-next-line */
+/* globals require */
 var server = require('./server');
-/* eslint-disable-next-line */
 var router = require('./router');
-/* eslint-disable-next-line */
 var requestHandlers = require('./requestHandlers');
 
 var handle = {};

@@ -1,4 +1,5 @@
-/* eslint-disable-next-line */
+/* globals require exports */
+/* exported querystring */
 var querystring = require('querystring'),
     fs = require('fs'),
     formidable = require('formidable');
@@ -42,15 +43,15 @@ function upload(response, request) {
         });
         response.writeHead(200, { 'Content-Type': 'text/html' });
         response.write('Received image:<br/> ');
-        response.write("<img src='/show' />");
+        response.write('<img src=\'/show\' />');
         response.end();
     });
 }
 
 function show(response) {
     console.log('Request handler \'show\' was called.');
-    response.writeHead(200, { "Content-Type": "image/png" });
-    fs.createReadStream("/tmp/test.png").pipe(response);
+    response.writeHead(200, { 'Content-Type': 'image/png' });
+    fs.createReadStream('/tmp/test.png').pipe(response);
 }
 
 exports.start = start;

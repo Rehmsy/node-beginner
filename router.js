@@ -1,3 +1,4 @@
+/* globals exports */
 function route(handle, pathname, response, request) {
     console.log('About to route a request for ' + pathname);
     if(typeof handle[pathname] === 'function') {
@@ -10,5 +11,4 @@ function route(handle, pathname, response, request) {
     }
 }
 
-/* eslint-disable-next-line */
 exports.route = route;

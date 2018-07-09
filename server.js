@@ -1,6 +1,5 @@
-/* eslint-disable-next-line */
+/* globals require exports */
 var http = require('http');
-/* eslint-disable-next-line */
 var url = require('url');
 
 function start(route, handle) {
@@ -14,5 +13,4 @@ function start(route, handle) {
     console.log('Server has started.');
 }
 
-/* eslint-disable-next-line */
 exports.start = start;
